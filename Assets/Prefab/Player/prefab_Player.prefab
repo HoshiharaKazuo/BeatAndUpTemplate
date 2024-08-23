@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2350344039101230501}
   - component: {fileID: 7367916370239479385}
+  - component: {fileID: 9014390600705411271}
   m_Layer: 0
   m_Name: PunchCollider
   m_TagString: Untagged
@@ -109,6 +110,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5956311, y: 0.27456266}
   m_EdgeRadius: 0
+--- !u!114 &9014390600705411271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894056282294883980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbb36f2ed5d4b8489ceccdedc619f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 1
 --- !u!1 &5983808474112871272
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +134,7 @@ GameObject:
   - component: {fileID: 5218753275490267023}
   - component: {fileID: 1921593318717658137}
   - component: {fileID: 510467273946846284}
+  - component: {fileID: 6124171701840359782}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -216,6 +231,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6124171701840359782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5983808474112871272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e745812c3bfca124aa3d26e9fa8cc3ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 3871286340413266695}
 --- !u!1 &6951095804797867706
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336231608276464936}
   - component: {fileID: 7836378395016315766}
+  - component: {fileID: 2673912050580883142}
   m_Layer: 0
   m_Name: KickCollider
   m_TagString: Untagged
@@ -293,6 +322,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.69284153, y: 0.39168862}
   m_EdgeRadius: 0
+--- !u!114 &2673912050580883142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951095804797867706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbb36f2ed5d4b8489ceccdedc619f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 2
 --- !u!1 &7868221406680712146
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,9 +347,10 @@ GameObject:
   - component: {fileID: 1661898036846113466}
   - component: {fileID: 8359108106698119565}
   - component: {fileID: 3871286340413266695}
+  - component: {fileID: 1401134232710269784}
   m_Layer: 0
   m_Name: prefab_Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -357,7 +400,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.252465, y: -0.63780856}
@@ -402,8 +445,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42705e5092ff5d54898d28fc21cdb5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 3
   attackDelay: 0.5
+  animator: {fileID: 510467273946846284}
+  YMaximo: 0.06
+  YMinimo: -2.97
+  XMaximo: 8.29
+  XMinimo: -7.94
+--- !u!114 &1401134232710269784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868221406680712146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c07b37203a33c4e87d2bf592352f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMaxLife: 5
   animator: {fileID: 510467273946846284}
 --- !u!1 &7921334161999419565
 GameObject:

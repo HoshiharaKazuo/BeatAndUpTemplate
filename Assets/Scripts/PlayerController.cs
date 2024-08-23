@@ -14,7 +14,20 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private Animator animator;
-    
+
+    [SerializeField]
+    private float YMaximo;
+
+    [SerializeField]
+    private float YMinimo;
+
+    [SerializeField]
+    private float XMaximo;
+
+    [SerializeField]
+    private float XMinimo;
+
+
     private Rigidbody2D rb;
 
     private Vector2 inputMovement;
@@ -26,7 +39,8 @@ public class PlayerController : MonoBehaviour
     private bool canAttack = true;
 
     private bool canMove = true;
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +68,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    
     private void RunAnimations()
     {
         if (inputMovement.magnitude == 0)
@@ -68,6 +83,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && canAttack)
         {
             animator.SetTrigger("punch");
+            rb.velocity = Vector2.zero;
             canAttack = false;
 
         }
@@ -75,19 +91,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K) && canAttack)
         {
             animator.SetTrigger("kick");
+            rb.velocity = Vector2.zero;
             canAttack = false;
         }
 
     }
 
-    private void DisableMovement()
+    public void DisableMovement()
     {
         canMove = false;
+        rb.velocity = Vector2.zero;
     }
 
-    private void EnableMovement()
+    public void EnableMovement()
     {
         canMove= true;
+        rb.velocity = Vector2.zero;
     }
 
     private void FlipPlayer()
@@ -108,8 +127,11 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerMovement()
     {
+       
         if (!canMove) return;
         movementDirection = inputMovement.normalized;
         rb.velocity = movementDirection * playerSpeed;
+        rb.position = new Vector2(Mathf.Clamp(rb.position.x,XMinimo, XMaximo), rb.position.y);
+        rb.position = new Vector2(rb.position.x, Mathf.Clamp(rb.position.y,YMinimo, YMaximo));
     }
 }

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4205424434732885372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1077792892372906485, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9920699c0d6239f47bb0ab0cf69c3589, type: 3}
+    - target: {fileID: 5024534284088117888, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: lifeToRegen
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03454753
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12744346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.004448076
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002333498279436938, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6103583775191805610, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
+      propertyPath: m_Name
+      value: prefab_Food_Apple Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e3c34f017e8168459de24a62ac272c6, type: 3}
